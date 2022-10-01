@@ -10,7 +10,7 @@
   "dependencies": {
     "@mdi/js": "^6.7.96",
     "apexcharts": "^3.35.2",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "core-js": "^3.6.5",
     "http-server": "^14.1.0",
     "minify-css-string": "^1.0.0",
