@@ -122,7 +122,39 @@ class MyModel ():
         plt.plot()
         plt.axis('off')
         plt.savefig(pathOutputFile)
+        # plt.show()
+
+
+    def visualize_features(self, pathImageFile, pathOutputFile):
+        densenet = self.model.module.densenet121
+        with torch.no_grad():
+ 
+            imageData = Image.open(pathImageFile).convert('RGB')
+            imageData = self.transformSequence(imageData)
+            imageData = imageData.unsqueeze_(0)
+            print(imageData.shape)
+        # forward hooks
+        t1, t2, t3 = [], [], []
+        t1_handle = densenet.features.transition1.conv.register_forward_hook(lambda module, in_tensor, out_tensor: t1.append(out_tensor))
+        t2_handle = densenet.features.transition1.conv.register_forward_hook(lambda module, in_tensor, out_tensor: t2.append(out_tensor))
+        t3_handle = densenet.features.transition1.conv.register_forward_hook(lambda module, in_tensor, out_tensor: t3.append(out_tensor))
+
+        # backward hooks
+        bt1, bt2, bt3 = [], [], []
+        bt1_handle = densenet.features.transition1.conv.register_backward_hook(lambda module, in_tensor, out_tensor: bt1.append(in_tensor))
+        bt2_handle = densenet.features.transition1.conv.register_backward_hook(lambda module, in_tensor, out_tensor: bt2.append(in_tensor))
+        bt3_handle = densenet.features.transition1.conv.register_backward_hook(lambda module, in_tensor, out_tensor: bt3.append(in_tensor))
+
+
+        self.predict_class(pathImageFile)
+        features = t1[0][0]
+        fig, axs = plt.subplots(len(features)//12,12,figsize=(2*12,2*len(features)//12))
+        for i, ax in enumerate(axs.flatten()):
+            ax.imshow(features[i].detach().abs())
+            ax.axis('off')
+        plt.savefig(pathOutputFile)
         plt.show()
+        
 
 
 
@@ -146,14 +178,14 @@ myModel = MyModel(model_path, nnClassCount, imgtransCrop)
 
 
 df = pd.read_csv(pathFileValid)
-for i in range(10):
+for i in range(1):
     sample = df.iloc[i]
     input_path = sample["Path"]
     input_path = f"../Chexpert/{input_path}"
     label = myModel.predict_class(input_path)
-    output_path = f"out_{i}"
     print(label)
     print("match? 1 if yes", sample[label])
-    myModel.generate(input_path, output_path, imgtransCrop)
+    myModel.generate(input_path, f"heatmap_{i}", imgtransCrop)
+    myModel.visualize_features(input_path, f"features_{i}")
     print()
 
