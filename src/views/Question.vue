@@ -23,8 +23,8 @@ export default {
           answers: [
             {
               id: 0,
-              title: "Consolidation",
-              isCorrect: true
+              title: "Pleural Effusion",
+              isCorrect: false
             },
             {
               id: 1,
@@ -33,13 +33,13 @@ export default {
             },
             {
               id: 2,
-              title: "Atelectasis",
-              isCorrect: true
+              title: "Lung Opacity",
+              isCorrect: false
             },
             {
               id: 3,
-              title: "Pneumothorax",
-              isCorrect: false
+              title: "Support Devices",
+              isCorrect: true
             }
           ]
         },
@@ -52,23 +52,23 @@ export default {
           answers: [
             {
               id: 0,
-              title: "Consolidation",
-              isCorrect: true
+              title: "Pleural Effusion",
+              isCorrect: false
             },
             {
               id: 1,
-              title: "Pneumonia",
+              title: "Edema",
               isCorrect: false
             },
             {
               id: 2,
-              title: "Atelectasis",
+              title: "Lung Opacity",
               isCorrect: false
             },
             {
               id: 3,
-              title: "Pneumothorax",
-              isCorrect: false
+              title: "Support Devices",
+              isCorrect: true
             }
           ]
         },
@@ -81,22 +81,22 @@ export default {
           answers: [
             {
               id: 0,
-              title: "Consolidation",
-              isCorrect: true
-            },
-            {
-              id: 1,
-              title: "Pneumonia",
-              isCorrect: true
-            },
-            {
-              id: 2,
-              title: "Atelectasis",
+              title: "Pleural Effusion",
               isCorrect: false
             },
             {
+              id: 1,
+              title: "Edema",
+              isCorrect: false
+            },
+            {
+              id: 2,
+              title: "Lung Opacity",
+              isCorrect: true
+            },
+            {
               id: 3,
-              title: "Pneumothorax",
+              title: "Support Devices",
               isCorrect: false
             }
           ]
@@ -110,12 +110,12 @@ export default {
           answers: [
             {
               id: 0,
-              title: "Consolidation",
+              title: "Pleural Effusion",
               isCorrect: false
             },
             {
               id: 1,
-              title: "Pneumonia",
+              title: "Lung Opacity",
               isCorrect: true
             },
             {
@@ -125,7 +125,7 @@ export default {
             },
             {
               id: 3,
-              title: "Pneumothorax",
+              title: "Support Devices",
               isCorrect: false
             }
           ]
@@ -139,22 +139,22 @@ export default {
           answers: [
             {
               id: 0,
-              title: "Consolidation",
-              isCorrect: true
+              title: "Pleural Effusion",
+              isCorrect: false
             },
             {
               id: 1,
-              title: "Pneumonia",
+              title: "Edema",
               isCorrect: true
             },
             {
               id: 2,
-              title: "Atelectasis",
-              isCorrect: true
+              title: "Lung Opacity",
+              isCorrect: false
             },
             {
               id: 3,
-              title: "Pneumothorax",
+              title: "Support Devices",
               isCorrect: false
             }
           ]
@@ -168,22 +168,22 @@ export default {
           answers: [
             {
               id: 0,
-              title: "Consolidation",
-              isCorrect: false
-            },
-            {
-              id: 1,
-              title: "Pneumonia",
+              title: "Pleural Effusion",
               isCorrect: true
             },
             {
+              id: 1,
+              title: "Edema",
+              isCorrect: false
+            },
+            {
               id: 2,
-              title: "Atelectasis",
+              title: "Lung Opacity",
               isCorrect: false
             },
             {
               id: 3,
-              title: "Pneumothorax",
+              title: "Support Devices",
               isCorrect: false
             }
           ]
@@ -197,22 +197,22 @@ export default {
           answers: [
             {
               id: 0,
-              title: "Consolidation",
+              title: "Pleural Effusion",
               isCorrect: true
             },
             {
               id: 1,
-              title: "Pneumonia",
+              title: "Edema",
               isCorrect: false
             },
             {
               id: 2,
-              title: "Atelectasis",
+              title: "Lung Opacity",
               isCorrect: true
             },
             {
               id: 3,
-              title: "Pneumothorax",
+              title: "Support Devices",
               isCorrect: false
             }
           ]
@@ -226,22 +226,22 @@ export default {
           answers: [
             {
               id: 0,
-              title: "Consolidation",
+              title: "Pleural Effusion",
               isCorrect: false
             },
             {
               id: 1,
-              title: "Pneumonia",
+              title: "Edema",
               isCorrect: false
             },
             {
               id: 2,
-              title: "Atelectasis",
+              title: "Lung Opacity",
               isCorrect: true
             },
             {
               id: 3,
-              title: "Pneumothorax",
+              title: "Support Devices",
               isCorrect: false
             }
           ]
@@ -255,22 +255,22 @@ export default {
           answers: [
             {
               id: 0,
-              title: "Consolidation",
+              title: "Pleural Effusion",
               isCorrect: false
             },
             {
               id: 1,
-              title: "Pneumonia",
+              title: "Edema",
               isCorrect: false
             },
             {
               id: 2,
-              title: "Atelectasis",
+              title: "Lung Opacity",
               isCorrect: false
             },
             {
               id: 3,
-              title: "Pneumothorax",
+              title: "Support Devices",
               isCorrect: true
             }
           ]
@@ -284,22 +284,22 @@ export default {
           answers: [
             {
               id: 0,
-              title: "Consolidation",
+              title: "Pleural Effusion",
               isCorrect: false
             },
             {
               id: 1,
-              title: "Pneumonia",
+              title: "Edema",
               isCorrect: false
             },
             {
               id: 2,
-              title: "Atelectasis",
+              title: "Lung Opacity",
               isCorrect: false
             },
             {
               id: 3,
-              title: "Pneumothorax",
+              title: "Support Devices",
               isCorrect: true
             }
           ]
@@ -437,6 +437,7 @@ export default {
                 width="300"
                 height="300"
                 :src="require(`@/assets/heatmaps-10/${question.heatmap}`)"
+                eager
               />
               <v-img
                 v-show="!hover"
@@ -485,6 +486,7 @@ export default {
             <v-img
               :key="currentScan + '' + currentQuestionID + Math.random() * 100"
               :src="require(`@/assets/images2/${currentScan}`)"
+              eager
             />
           </v-fade-transition>
         </v-col>
@@ -512,7 +514,7 @@ export default {
               :elevation="disableButtons ? 0 : 10"
               :disabled="disableButtons"
               :style="disableButtons ? 'pointer-events: none' : ''"
-              height="150"
+              height="100"
               @click="selectAnswer(isCorrect)"
             >
               {{ title }}

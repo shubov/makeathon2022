@@ -19,7 +19,7 @@ export default {
           value: "second"
         }
       ],
-      selectedDiseases: [],
+      selectedDiseases: ["support_devices", "lung_opacity", "edema", "pleural_effusion"],
       diseases: [
         {
           text: "No Finding",
