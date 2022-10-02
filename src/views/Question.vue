@@ -1,17 +1,22 @@
 <script>
+import {mdiCheckBold, mdiClose} from "@mdi/js";
+
 export default {
   name: "Question",
   data: function () {
     return {
+      mdiCheckBold,
+      mdiClose,
       showResults: false,
       showAnswers: false,
       disableButtons: false,
       currentQuestionID: 0,
       colors: ['primary', 'secondary', 'success', 'warning', 'info'],
+      correctlyAnsweredQuestions: [],
       questions: [
         {
           scan: "image1.png",
-          heatmap: 0,
+          heatmap: "heatmap_0.png",
           title: "What is the disease?",
           age: 76,
           sex: "Male",
@@ -23,7 +28,7 @@ export default {
             },
             {
               id: 1,
-              title: "Pneumonia",
+              title: "Edema",
               isCorrect: false
             },
             {
@@ -40,7 +45,7 @@ export default {
         },
         {
           scan: "image2.png",
-          heatmap: 0,
+          heatmap: "heatmap_1.png",
           title: "What is the disease?",
           age: 66,
           sex: "Female",
@@ -69,7 +74,7 @@ export default {
         },
         {
           scan: "image3.png",
-          heatmap: 0,
+          heatmap: "heatmap_2.png",
           title: "What is the disease?",
           age: 63,
           sex: "Female",
@@ -98,7 +103,7 @@ export default {
         },
         {
           scan: "image4.png",
-          heatmap: 0,
+          heatmap: "heatmap_3.png",
           title: "What is the disease?",
           age: 77,
           sex: "Female",
@@ -115,7 +120,7 @@ export default {
             },
             {
               id: 2,
-              title: "Atelectasis",
+              title: "Edema",
               isCorrect: false
             },
             {
@@ -127,7 +132,7 @@ export default {
         },
         {
           scan: "image5.png",
-          heatmap: 0,
+          heatmap: "heatmap_4.png",
           title: "What is the disease?",
           age: 52,
           sex: "Male",
@@ -156,7 +161,7 @@ export default {
         },
         {
           scan: "image6.png",
-          heatmap: 0,
+          heatmap: "heatmap_5.png",
           title: "What is the disease?",
           age: 50,
           sex: "Male",
@@ -185,7 +190,7 @@ export default {
         },
         {
           scan: "image7.png",
-          heatmap: 0,
+          heatmap: "heatmap_6.png",
           title: "What is the disease?",
           age: 37,
           sex: "Male",
@@ -214,7 +219,7 @@ export default {
         },
         {
           scan: "image8.png",
-          heatmap: 0,
+          heatmap: "heatmap_7.png",
           title: "What is the disease?",
           age: 73,
           sex: "Female",
@@ -243,7 +248,7 @@ export default {
         },
         {
           scan: "image9.png",
-          heatmap: 0,
+          heatmap: "heatmap_8.png",
           title: "What is the disease?",
           age: 31,
           sex: "Male",
@@ -272,7 +277,7 @@ export default {
         },
         {
           scan: "image10.png",
-          heatmap: 0,
+          heatmap: "heatmap_9.png",
           title: "What is the disease?",
           age: 50,
           sex: "Male",
@@ -354,6 +359,7 @@ export default {
     selectAnswer(isCorrect) {
       this.disableButtons = true
       if (isCorrect) {
+        this.correctlyAnsweredQuestions.push(this.currentQuestionID)
         this.correctAnswers++
       }
       setTimeout(() => {
@@ -430,7 +436,7 @@ export default {
                 v-show="hover"
                 width="300"
                 height="300"
-                :src="require(`@/assets/heatmaps/${question.heatmap}.png`)"
+                :src="require(`@/assets/heatmaps-10/${question.heatmap}`)"
               />
               <v-img
                 v-show="!hover"
@@ -439,6 +445,9 @@ export default {
                 :src="require(`@/assets/images2/${question.scan}`)"
               />
               <v-card-text class="text-h6 font-weight-bold text-center">
+                <v-icon :color="correctlyAnsweredQuestions.includes(index) ? 'success' : 'warning'">
+                  {{ correctlyAnsweredQuestions.includes(index) ? mdiCheckBold : mdiClose }}
+                </v-icon>
                 {{ question.answers.find(answer => answer.isCorrect).title }}
               </v-card-text>
             </v-card>
@@ -511,7 +520,7 @@ export default {
           </v-item>
         </v-col>
         <v-col
-          v-if=false
+          v-if="false"
           cols="12"
           class="d-flex justify-center"
         >
