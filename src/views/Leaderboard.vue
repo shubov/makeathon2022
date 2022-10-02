@@ -16,19 +16,19 @@ export default {
       ],
       students: [
         {
-          place: 1,
+          place: 2,
           name: 'Rita',
           overall_correct: 86,
           questions_answered: 25,
         },
         {
-          place: 1,
+          place: 4,
           name: 'Mike',
           overall_correct: 76,
           questions_answered: 35,
         },
         {
-          place: 1,
+          place: 5,
           name: 'Clark',
           overall_correct: 32,
           questions_answered: 50,
@@ -40,7 +40,7 @@ export default {
           questions_answered: 23,
         },
         {
-          place: 1,
+          place: 3,
           name: 'Suzanne',
           overall_correct: 83,
           questions_answered: 42,
@@ -71,9 +71,7 @@ export default {
         <v-data-table
           :headers="headers"
           :items="students"
-          :sort-by="['questions_answered', 'overall_correct']"
-          :sort-desc="[true, true]"
-          multi-sort
+          :sort-by="['place']"
           class="elevation-1"
         />
       </v-col>

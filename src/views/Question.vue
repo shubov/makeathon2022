@@ -4,6 +4,7 @@ export default {
   data: function () {
     return {
       showResults: false,
+      showAnswers: false,
       disableButtons: false,
       currentQuestionID: 0,
       colors: ['primary', 'secondary', 'success', 'warning', 'info'],
@@ -32,31 +33,56 @@ export default {
           },
         ]
       },
-      {
-        scan: 2,
-        heatmap: 0,
-        age: 30,
-        sex: "Male",
-        title: "What is the disease?",
-        answers: [
-          {
-            title: "Edema",
-            isCorrect: true,
-          },
-          {
-            title: "Lung Opacity",
-            isCorrect: false,
-          },
-          {
-            title: "Lung Lesion",
-            isCorrect: false,
-          },
-          {
-            title: "No Finding",
-            isCorrect: false,
-          },
-        ]
-      }],
+        {
+          scan: 2,
+          heatmap: 0,
+          age: 30,
+          sex: "Male",
+          title: "What is the disease?",
+          answers: [
+            {
+              title: "Edema",
+              isCorrect: true,
+            },
+            {
+              title: "Lung Opacity",
+              isCorrect: false,
+            },
+            {
+              title: "Lung Lesion",
+              isCorrect: false,
+            },
+            {
+              title: "No Finding",
+              isCorrect: false,
+            },
+          ]
+        },
+        {
+          scan: 2,
+          heatmap: 0,
+          age: 30,
+          sex: "Male",
+          title: "What is the disease?",
+          answers: [
+            {
+              title: "Edema",
+              isCorrect: true,
+            },
+            {
+              title: "Lung Opacity",
+              isCorrect: false,
+            },
+            {
+              title: "Lung Lesion",
+              isCorrect: false,
+            },
+            {
+              title: "No Finding",
+              isCorrect: false,
+            },
+          ]
+        }],
       correctAnswers: 0,
     }
   },
@@ -89,7 +115,7 @@ export default {
       return this.currentQuestion.age
     },
     results() {
-      return this.correctAnswers / this.totalNumberOfQuestions * 100
+      return (this.correctAnswers / this.totalNumberOfQuestions * 100).toFixed(0)
     },
     resultClass() {
       if (this.results < 50) {
@@ -132,26 +158,89 @@ export default {
     class="d-flex align-center justify-center loader--full"
     :class="resultClass"
   >
-    <div class="d-flex flex-column align-center justify-center">
+    <div class="d-flex flex-column align-center justify-center text-center">
       <p class="text-h1 font-weight-bold white--text">
         {{ correctAnswers }} / {{ totalNumberOfQuestions }}
       </p>
       <p class="text-h5 font-weight-bold white--text">
-        {{ correctAnswers / totalNumberOfQuestions * 100 }}% of the questions were answered correctly
+        {{ results }}% of the questions were answered correctly
       </p>
       <v-btn
         rounded
         depressed
         to="/leaderboard"
+        class="mb-3"
       >
-        see the leaderboard
+        to leaderboard
       </v-btn>
+      <v-btn
+        v-if="showAnswers"
+        rounded
+        color="secondary"
+        depressed
+        @click="showAnswers = false"
+      >
+        hide answers
+      </v-btn>
+      <v-btn
+        v-else
+        rounded
+        color="secondary"
+        depressed
+        @click="showAnswers = true"
+      >
+        check answers
+      </v-btn>
+      <v-row
+        v-if="showAnswers"
+        class="ma-0"
+        align="center"
+        justify="center"
+      >
+        <v-col
+          v-for="(question, index) in questions"
+          :key="index"
+          cols="auto"
+        >
+          <v-hover v-slot="{hover}">
+            <v-card
+              class="d-flex flex-column align-center justify-center"
+            >
+              <v-card-title class="text-h5 font-weight-bold">
+                {{ index + 1 }}. {{ question.title }}
+              </v-card-title>
+              <v-img
+                v-show="hover"
+                width="300"
+                height="300"
+                :src="require(`@/assets/heatmaps/${question.heatmap}.png`)"
+              />
+              <v-img
+                v-show="!hover"
+                width="300"
+                height="300"
+                :src="require(`@/assets/images/${question.scan}.jpg`)"
+              />
+              <v-card-text class="text-h6 font-weight-bold text-center">
+                {{ question.answers.find(answer => answer.isCorrect).title }}
+              </v-card-text>
+            </v-card>
+          </v-hover>
+        </v-col>
+      </v-row>
     </div>
   </div>
   <v-container
     v-else
     style="min-height: 100%"
   >
+    <v-overlay v-if="disableButtons">
+      <v-progress-circular
+        indeterminate
+        size="64"
+        color="primary"
+      />
+    </v-overlay>
     <template>
       <v-row
         v-if="currentQuestion"
@@ -237,9 +326,9 @@ export default {
 
 <style scoped lang="scss">
 .loader {
-  height: calc(100vh - 24px);
+  min-height: calc(100vh - 24px);
   &--full {
-    height: 100vh !important;
+    min-height: 100vh !important;
   }
   width: 100%;
 }

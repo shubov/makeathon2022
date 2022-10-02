@@ -3,6 +3,21 @@
     "de": "German",
     "app-name": "ChestCT",
     "pages": {
-
+        "result": {
+            "title": "Results",
+            "description": "This is the Results page"
+        },
+        "leaderboard": {
+            "title": "Leaderboard",
+            "description": "This is the Leaderboard page"
+        },
+        "question": {
+            "title": "Quiz",
+            "description": "This is the Quiz page"
+        },
+        "main": {
+            "title": "Start",
+            "description": "This is the Start page"
+        }
     }
 }
