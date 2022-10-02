@@ -8,81 +8,298 @@ export default {
       disableButtons: false,
       currentQuestionID: 0,
       colors: ['primary', 'secondary', 'success', 'warning', 'info'],
-      questions: [{
-        scan: 1,
-        heatmap: 0,
-        age: 25,
-        sex: "Female",
-        title: "What is the disease?",
-        answers: [
-          {
-            title: "Pneumothorax",
-            isCorrect: true,
-          },
-          {
-            title: "Atelectasis",
-            isCorrect: false,
-          },
-          {
-            title: "Pneumonia",
-            isCorrect: false,
-          },
-          {
-            title: "Consolidation",
-            isCorrect: false,
-          },
-        ]
-      },
+      questions: [
         {
-          scan: 2,
+          scan: "image1.png",
           heatmap: 0,
-          age: 30,
-          sex: "Male",
           title: "What is the disease?",
+          age: 76,
+          sex: "Male",
           answers: [
             {
-              title: "Edema",
-              isCorrect: true,
+              id: 0,
+              title: "Consolidation",
+              isCorrect: true
             },
             {
-              title: "Lung Opacity",
-              isCorrect: false,
+              id: 1,
+              title: "Pneumonia",
+              isCorrect: false
             },
             {
-              title: "Lung Lesion",
-              isCorrect: false,
+              id: 2,
+              title: "Atelectasis",
+              isCorrect: true
             },
             {
-              title: "No Finding",
-              isCorrect: false,
-            },
+              id: 3,
+              title: "Pneumothorax",
+              isCorrect: false
+            }
           ]
         },
         {
-          scan: 2,
+          scan: "image2.png",
           heatmap: 0,
-          age: 30,
-          sex: "Male",
           title: "What is the disease?",
+          age: 66,
+          sex: "Female",
           answers: [
             {
-              title: "Edema",
-              isCorrect: true,
+              id: 0,
+              title: "Consolidation",
+              isCorrect: true
             },
             {
-              title: "Lung Opacity",
-              isCorrect: false,
+              id: 1,
+              title: "Pneumonia",
+              isCorrect: false
             },
             {
-              title: "Lung Lesion",
-              isCorrect: false,
+              id: 2,
+              title: "Atelectasis",
+              isCorrect: false
             },
             {
-              title: "No Finding",
-              isCorrect: false,
-            },
+              id: 3,
+              title: "Pneumothorax",
+              isCorrect: false
+            }
           ]
-        }],
+        },
+        {
+          scan: "image3.png",
+          heatmap: 0,
+          title: "What is the disease?",
+          age: 63,
+          sex: "Female",
+          answers: [
+            {
+              id: 0,
+              title: "Consolidation",
+              isCorrect: true
+            },
+            {
+              id: 1,
+              title: "Pneumonia",
+              isCorrect: true
+            },
+            {
+              id: 2,
+              title: "Atelectasis",
+              isCorrect: false
+            },
+            {
+              id: 3,
+              title: "Pneumothorax",
+              isCorrect: false
+            }
+          ]
+        },
+        {
+          scan: "image4.png",
+          heatmap: 0,
+          title: "What is the disease?",
+          age: 77,
+          sex: "Female",
+          answers: [
+            {
+              id: 0,
+              title: "Consolidation",
+              isCorrect: false
+            },
+            {
+              id: 1,
+              title: "Pneumonia",
+              isCorrect: true
+            },
+            {
+              id: 2,
+              title: "Atelectasis",
+              isCorrect: false
+            },
+            {
+              id: 3,
+              title: "Pneumothorax",
+              isCorrect: false
+            }
+          ]
+        },
+        {
+          scan: "image5.png",
+          heatmap: 0,
+          title: "What is the disease?",
+          age: 52,
+          sex: "Male",
+          answers: [
+            {
+              id: 0,
+              title: "Consolidation",
+              isCorrect: true
+            },
+            {
+              id: 1,
+              title: "Pneumonia",
+              isCorrect: true
+            },
+            {
+              id: 2,
+              title: "Atelectasis",
+              isCorrect: true
+            },
+            {
+              id: 3,
+              title: "Pneumothorax",
+              isCorrect: false
+            }
+          ]
+        },
+        {
+          scan: "image6.png",
+          heatmap: 0,
+          title: "What is the disease?",
+          age: 50,
+          sex: "Male",
+          answers: [
+            {
+              id: 0,
+              title: "Consolidation",
+              isCorrect: false
+            },
+            {
+              id: 1,
+              title: "Pneumonia",
+              isCorrect: true
+            },
+            {
+              id: 2,
+              title: "Atelectasis",
+              isCorrect: false
+            },
+            {
+              id: 3,
+              title: "Pneumothorax",
+              isCorrect: false
+            }
+          ]
+        },
+        {
+          scan: "image7.png",
+          heatmap: 0,
+          title: "What is the disease?",
+          age: 37,
+          sex: "Male",
+          answers: [
+            {
+              id: 0,
+              title: "Consolidation",
+              isCorrect: true
+            },
+            {
+              id: 1,
+              title: "Pneumonia",
+              isCorrect: false
+            },
+            {
+              id: 2,
+              title: "Atelectasis",
+              isCorrect: true
+            },
+            {
+              id: 3,
+              title: "Pneumothorax",
+              isCorrect: false
+            }
+          ]
+        },
+        {
+          scan: "image8.png",
+          heatmap: 0,
+          title: "What is the disease?",
+          age: 73,
+          sex: "Female",
+          answers: [
+            {
+              id: 0,
+              title: "Consolidation",
+              isCorrect: false
+            },
+            {
+              id: 1,
+              title: "Pneumonia",
+              isCorrect: false
+            },
+            {
+              id: 2,
+              title: "Atelectasis",
+              isCorrect: true
+            },
+            {
+              id: 3,
+              title: "Pneumothorax",
+              isCorrect: false
+            }
+          ]
+        },
+        {
+          scan: "image9.png",
+          heatmap: 0,
+          title: "What is the disease?",
+          age: 31,
+          sex: "Male",
+          answers: [
+            {
+              id: 0,
+              title: "Consolidation",
+              isCorrect: false
+            },
+            {
+              id: 1,
+              title: "Pneumonia",
+              isCorrect: false
+            },
+            {
+              id: 2,
+              title: "Atelectasis",
+              isCorrect: false
+            },
+            {
+              id: 3,
+              title: "Pneumothorax",
+              isCorrect: true
+            }
+          ]
+        },
+        {
+          scan: "image10.png",
+          heatmap: 0,
+          title: "What is the disease?",
+          age: 50,
+          sex: "Male",
+          answers: [
+            {
+              id: 0,
+              title: "Consolidation",
+              isCorrect: false
+            },
+            {
+              id: 1,
+              title: "Pneumonia",
+              isCorrect: false
+            },
+            {
+              id: 2,
+              title: "Atelectasis",
+              isCorrect: false
+            },
+            {
+              id: 3,
+              title: "Pneumothorax",
+              isCorrect: true
+            }
+          ]
+        }
+      ],
       correctAnswers: 0,
     }
   },
@@ -219,7 +436,7 @@ export default {
                 v-show="!hover"
                 width="300"
                 height="300"
-                :src="require(`@/assets/images/${question.scan}.jpg`)"
+                :src="require(`@/assets/images2/${question.scan}`)"
               />
               <v-card-text class="text-h6 font-weight-bold text-center">
                 {{ question.answers.find(answer => answer.isCorrect).title }}
@@ -258,7 +475,7 @@ export default {
           <v-fade-transition mode="out-in">
             <v-img
               :key="currentScan + '' + currentQuestionID + Math.random() * 100"
-              :src="require(`@/assets/images/${currentScan}.jpg`)"
+              :src="require(`@/assets/images2/${currentScan}`)"
             />
           </v-fade-transition>
         </v-col>
@@ -294,7 +511,7 @@ export default {
           </v-item>
         </v-col>
         <v-col
-          v-if="false"
+          v-if=false
           cols="12"
           class="d-flex justify-center"
         >
