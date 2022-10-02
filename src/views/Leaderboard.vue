@@ -57,27 +57,25 @@ export default {
       justify="center"
       align="center"
     >
-    <v-col
-      cols="12"
-      class="text-center"
-    >
-      <p 
-      class="text-h2 font-weight-bold primary--text"
+      <v-col
+        cols="12"
+        class="text-center"
       >
-        Score Board
-      </p>
-    </v-col>
+        <p 
+          class="text-h2 font-weight-bold primary--text"
+        >
+          Score Board
+        </p>
+      </v-col>
       <v-col cols="12">
         <v-data-table
-        :headers="headers"
-        :items="students"
-        :sort-by="['questions_answered', 'overall_correct']"
-        :sort-desc="[true, true]"
-        multi-sort
-        class="elevation-1"
-        >
-        
-        </v-data-table>
+          :headers="headers"
+          :items="students"
+          :sort-by="['questions_answered', 'overall_correct']"
+          :sort-desc="[true, true]"
+          multi-sort
+          class="elevation-1"
+        />
       </v-col>
     </v-row>
   </v-container>

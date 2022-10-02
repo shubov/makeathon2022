@@ -1,10 +1,12 @@
 <script>
 import {mdiCheckboxBlankOutline, mdiCloseBox, mdiMinusBox} from "@mdi/js";
+import Api from "@/services/api/api";
 
 export default {
   name: "Start",
   data: function () {
     return {
+      name: "",
       numberOfQuestions: 10,
       gameMode: "first",
       gameModes: [
@@ -96,6 +98,9 @@ export default {
       return null
     },
   },
+  async created() {
+    console.log(await Api.get("/items/Atelectasis"))
+  },
   methods: {
     toggle () {
       this.$nextTick(() => {
@@ -128,13 +133,14 @@ export default {
         class="text-center"
       >
         <p class="text-h2 font-weight-bold">
-          Computer tomography copilot training
+          Radiology training
         </p>
         <p class="text-h5">
           Please select the game mode, the number of questions and which diseases yoy want to master.
         </p>
       </v-col>
       <v-col
+        v-if="false"
         cols="12"
         class="d-flex align-center justify-space-around"
       >
@@ -187,7 +193,10 @@ export default {
             </v-list-item>
             <v-divider class="mt-2" />
           </template>
-          <template v-if="selectedDiseases.length > 1" #selection="{index}">
+          <template
+            v-if="selectedDiseases.length > 1"
+            #selection="{index}"
+          >
             <span v-if="index === 0">
               {{ selectedDiseases.length }} selected
             </span>
@@ -210,7 +219,23 @@ export default {
           pattern="\d*"
         />
       </v-col>
-      <v-col cols="6">
+      <v-col
+        cols="12"
+        class="d-flex align-center justify-space-around"
+      >
+        <span class="pr-2 select-label">Name</span>
+        <v-text-field
+          v-model="name"
+          class="select-field"
+          solo
+          flat
+          outlined
+          hide-details
+        />
+      </v-col>
+      <v-col
+        cols="6"
+      >
         <v-btn
           color="primary"
           to="/question"
