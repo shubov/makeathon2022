@@ -9,48 +9,50 @@ export default {
       colors: ['primary', 'secondary', 'success', 'warning', 'info'],
       questions: [{
         scan: 1,
+        heatmap: 0,
         age: 25,
         sex: "Female",
         title: "What is the disease?",
         answers: [
           {
-            title: "Cancer",
+            title: "Pneumothorax",
             isCorrect: true,
           },
           {
-            title: "Diabetes",
+            title: "Atelectasis",
             isCorrect: false,
           },
           {
-            title: "Hypertension",
+            title: "Pneumonia",
             isCorrect: false,
           },
           {
-            title: "Asthma",
+            title: "Consolidation",
             isCorrect: false,
           },
         ]
       },
       {
         scan: 2,
+        heatmap: 0,
         age: 30,
         sex: "Male",
         title: "What is the disease?",
         answers: [
           {
-            title: "Cancer",
+            title: "Edema",
             isCorrect: true,
           },
           {
-            title: "Hypertension",
+            title: "Lung Opacity",
             isCorrect: false,
           },
           {
-            title: "Diabetes",
+            title: "Lung Lesion",
             isCorrect: false,
           },
           {
-            title: "Asthma",
+            title: "No Finding",
             isCorrect: false,
           },
         ]
@@ -107,7 +109,6 @@ export default {
       this.currentQuestionID--
     },
     selectAnswer(isCorrect) {
-      console.log(isCorrect)
       this.disableButtons = true
       if (isCorrect) {
         this.correctAnswers++
@@ -143,7 +144,7 @@ export default {
         depressed
         to="/leaderboard"
       >
-        SEE the leaderboard
+        see the leaderboard
       </v-btn>
     </div>
   </div>

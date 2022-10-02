@@ -22,7 +22,7 @@ export default {
           questions_answered: 25,
         },
         {
-          place: 1 ,
+          place: 1,
           name: 'Mike',
           overall_correct: 76,
           questions_answered: 35,
