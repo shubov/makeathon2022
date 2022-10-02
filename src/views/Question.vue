@@ -14,64 +14,64 @@ export default {
       colors: ['primary', 'secondary', 'success', 'warning', 'info'],
       correctlyAnsweredQuestions: [],
       questions: [
-        {
-          scan: "image1.png",
-          heatmap: "heatmap_0.png",
-          title: "What is the disease?",
-          age: 76,
-          sex: "Male",
-          answers: [
-            {
-              id: 0,
-              title: "Pleural Effusion",
-              isCorrect: false
-            },
-            {
-              id: 1,
-              title: "Edema",
-              isCorrect: false
-            },
-            {
-              id: 2,
-              title: "Lung Opacity",
-              isCorrect: false
-            },
-            {
-              id: 3,
-              title: "Support Devices",
-              isCorrect: true
-            }
-          ]
-        },
-        {
-          scan: "image2.png",
-          heatmap: "heatmap_1.png",
-          title: "What is the disease?",
-          age: 66,
-          sex: "Female",
-          answers: [
-            {
-              id: 0,
-              title: "Pleural Effusion",
-              isCorrect: false
-            },
-            {
-              id: 1,
-              title: "Edema",
-              isCorrect: false
-            },
-            {
-              id: 2,
-              title: "Lung Opacity",
-              isCorrect: false
-            },
-            {
-              id: 3,
-              title: "Support Devices",
-              isCorrect: true
-            }
-          ]
-        },
+        // {
+        //   scan: "image1.png",
+        //   heatmap: "heatmap_0.png",
+        //   title: "What is the disease?",
+        //   age: 76,
+        //   sex: "Male",
+        //   answers: [
+        //     {
+        //       id: 0,
+        //       title: "Pleural Effusion",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 1,
+        //       title: "Edema",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 2,
+        //       title: "Lung Opacity",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 3,
+        //       title: "Support Devices",
+        //       isCorrect: true
+        //     }
+        //   ]
+        // },
+        // {
+        //   scan: "image2.png",
+        //   heatmap: "heatmap_1.png",
+        //   title: "What is the disease?",
+        //   age: 66,
+        //   sex: "Female",
+        //   answers: [
+        //     {
+        //       id: 0,
+        //       title: "Pleural Effusion",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 1,
+        //       title: "Edema",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 2,
+        //       title: "Lung Opacity",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 3,
+        //       title: "Support Devices",
+        //       isCorrect: true
+        //     }
+        //   ]
+        // },
         {
           scan: "image3.png",
           heatmap: "heatmap_2.png",
@@ -101,64 +101,64 @@ export default {
             }
           ]
         },
-        {
-          scan: "image4.png",
-          heatmap: "heatmap_3.png",
-          title: "What is the disease?",
-          age: 77,
-          sex: "Female",
-          answers: [
-            {
-              id: 0,
-              title: "Pleural Effusion",
-              isCorrect: false
-            },
-            {
-              id: 1,
-              title: "Lung Opacity",
-              isCorrect: true
-            },
-            {
-              id: 2,
-              title: "Edema",
-              isCorrect: false
-            },
-            {
-              id: 3,
-              title: "Support Devices",
-              isCorrect: false
-            }
-          ]
-        },
-        {
-          scan: "image5.png",
-          heatmap: "heatmap_4.png",
-          title: "What is the disease?",
-          age: 52,
-          sex: "Male",
-          answers: [
-            {
-              id: 0,
-              title: "Pleural Effusion",
-              isCorrect: false
-            },
-            {
-              id: 1,
-              title: "Edema",
-              isCorrect: true
-            },
-            {
-              id: 2,
-              title: "Lung Opacity",
-              isCorrect: false
-            },
-            {
-              id: 3,
-              title: "Support Devices",
-              isCorrect: false
-            }
-          ]
-        },
+        // {
+        //   scan: "image4.png",
+        //   heatmap: "heatmap_3.png",
+        //   title: "What is the disease?",
+        //   age: 77,
+        //   sex: "Female",
+        //   answers: [
+        //     {
+        //       id: 0,
+        //       title: "Pleural Effusion",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 1,
+        //       title: "Lung Opacity",
+        //       isCorrect: true
+        //     },
+        //     {
+        //       id: 2,
+        //       title: "Edema",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 3,
+        //       title: "Support Devices",
+        //       isCorrect: false
+        //     }
+        //   ]
+        // },
+        // {
+        //   scan: "image5.png",
+        //   heatmap: "heatmap_4.png",
+        //   title: "What is the disease?",
+        //   age: 52,
+        //   sex: "Male",
+        //   answers: [
+        //     {
+        //       id: 0,
+        //       title: "Pleural Effusion",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 1,
+        //       title: "Edema",
+        //       isCorrect: true
+        //     },
+        //     {
+        //       id: 2,
+        //       title: "Lung Opacity",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 3,
+        //       title: "Support Devices",
+        //       isCorrect: false
+        //     }
+        //   ]
+        // },
         {
           scan: "image6.png",
           heatmap: "heatmap_5.png",
@@ -198,64 +198,6 @@ export default {
             {
               id: 0,
               title: "Pleural Effusion",
-              isCorrect: true
-            },
-            {
-              id: 1,
-              title: "Edema",
-              isCorrect: false
-            },
-            {
-              id: 2,
-              title: "Lung Opacity",
-              isCorrect: true
-            },
-            {
-              id: 3,
-              title: "Support Devices",
-              isCorrect: false
-            }
-          ]
-        },
-        {
-          scan: "image8.png",
-          heatmap: "heatmap_7.png",
-          title: "What is the disease?",
-          age: 73,
-          sex: "Female",
-          answers: [
-            {
-              id: 0,
-              title: "Pleural Effusion",
-              isCorrect: false
-            },
-            {
-              id: 1,
-              title: "Edema",
-              isCorrect: false
-            },
-            {
-              id: 2,
-              title: "Lung Opacity",
-              isCorrect: true
-            },
-            {
-              id: 3,
-              title: "Support Devices",
-              isCorrect: false
-            }
-          ]
-        },
-        {
-          scan: "image9.png",
-          heatmap: "heatmap_8.png",
-          title: "What is the disease?",
-          age: 31,
-          sex: "Male",
-          answers: [
-            {
-              id: 0,
-              title: "Pleural Effusion",
               isCorrect: false
             },
             {
@@ -275,35 +217,93 @@ export default {
             }
           ]
         },
-        {
-          scan: "image10.png",
-          heatmap: "heatmap_9.png",
-          title: "What is the disease?",
-          age: 50,
-          sex: "Male",
-          answers: [
-            {
-              id: 0,
-              title: "Pleural Effusion",
-              isCorrect: false
-            },
-            {
-              id: 1,
-              title: "Edema",
-              isCorrect: false
-            },
-            {
-              id: 2,
-              title: "Lung Opacity",
-              isCorrect: false
-            },
-            {
-              id: 3,
-              title: "Support Devices",
-              isCorrect: true
-            }
-          ]
-        }
+        // {
+        //   scan: "image8.png",
+        //   heatmap: "heatmap_7.png",
+        //   title: "What is the disease?",
+        //   age: 73,
+        //   sex: "Female",
+        //   answers: [
+        //     {
+        //       id: 0,
+        //       title: "Pleural Effusion",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 1,
+        //       title: "Edema",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 2,
+        //       title: "Lung Opacity",
+        //       isCorrect: true
+        //     },
+        //     {
+        //       id: 3,
+        //       title: "Support Devices",
+        //       isCorrect: false
+        //     }
+        //   ]
+        // },
+        // {
+        //   scan: "image9.png",
+        //   heatmap: "heatmap_8.png",
+        //   title: "What is the disease?",
+        //   age: 31,
+        //   sex: "Male",
+        //   answers: [
+        //     {
+        //       id: 0,
+        //       title: "Pleural Effusion",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 1,
+        //       title: "Edema",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 2,
+        //       title: "Lung Opacity",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 3,
+        //       title: "Support Devices",
+        //       isCorrect: true
+        //     }
+        //   ]
+        // },
+        // {
+        //   scan: "image10.png",
+        //   heatmap: "heatmap_9.png",
+        //   title: "What is the disease?",
+        //   age: 50,
+        //   sex: "Male",
+        //   answers: [
+        //     {
+        //       id: 0,
+        //       title: "Pleural Effusion",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 1,
+        //       title: "Edema",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 2,
+        //       title: "Lung Opacity",
+        //       isCorrect: false
+        //     },
+        //     {
+        //       id: 3,
+        //       title: "Support Devices",
+        //       isCorrect: true
+        //     }
+        //   ]
+        // }
       ],
       correctAnswers: 0,
     }

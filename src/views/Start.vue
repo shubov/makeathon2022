@@ -7,7 +7,7 @@ export default {
   data: function () {
     return {
       name: "",
-      numberOfQuestions: 10,
+      numberOfQuestions: 3,
       gameMode: "first",
       gameModes: [
         {
